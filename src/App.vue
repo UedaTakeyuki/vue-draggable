@@ -5,6 +5,7 @@
         class="mx-auto"
         max-width="500"
       > 
+      <!-- https://dev.classmethod.jp/articles/vue-draggable-2/ -->
         <v-card-title> Draggable List </v-card-title>
         <v-card-text>
           <v-list>
