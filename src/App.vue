@@ -1,14 +1,27 @@
 <template>
   <v-app>
     <v-main>
-      <div>
-        <draggable v-model="items" draggable=".item">
-          <div v-for="item in items" :key="item.id" class="item">
-            {{item.name}}
-          </div>
-        </draggable>
-        <button @click="showItems">表示</button>
-      </div>
+      <v-card
+        class="mx-auto"
+        max-width="500"
+      > 
+        <v-card-title> Draggable List </v-card-title>
+        <v-card-text>
+          <v-list>
+            <draggable v-model="items" draggable=".item">
+              <v-list-item v-for="item in items" :key="item.id" class="item"
+                @click="showItems"
+              >
+                <v-list-item-content
+                >
+                  <v-list-item-title v-text="item.name"></v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </draggable>
+            <button @click="showItems">表示</button>
+          </v-list>
+        </v-card-text>
+      </v-card>
     </v-main>
   </v-app>
 </template>
